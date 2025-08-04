@@ -1,4 +1,4 @@
-<div class="container center-screen py-5">
+<div class="container center-screen pt-2">
     <div class="card shadow-sm entity-card w-100" style="max-width: 1000px;">
         <div class="card-header bg-info text-black">
             <h3 class="mb-0">Department Details</h3>
@@ -10,12 +10,12 @@
             <dl class="row">
                 <div class="fields-grid">
                     <div class="field-item">
-                        <label for="deptName" class="field-label">Dept. Name</label>
-                        <div id="deptName" class="field-value"><?= htmlspecialchars($dept['dept_name']); ?></div>
+                        <label for="dept_name" class="field-label">Dept. Name</label>
+                        <div id="dept_name" class="field-value"><?= htmlspecialchars($dept['dept_name']); ?></div>
                     </div>
                     <div class="field-item">
-                        <label for="facultyHead" class="field-label">Faculty Head</label>
-                        <div id="facultyHead" class="field-value"><?= htmlspecialchars($dept['faculty_head']); ?></div>
+                        <label for="faculty_head" class="field-label">Faculty Head</label>
+                        <div id="faculty_head" class="field-value"><?= htmlspecialchars($dept['faculty_head']); ?></div>
                     </div>
                     <div class="field-item">
                         <label for="email" class="field-label">Email</label>
