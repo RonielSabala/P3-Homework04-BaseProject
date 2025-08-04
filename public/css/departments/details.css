@@ -1,0 +1,63 @@
+.center-screen {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: auto;
+}
+
+.entity-card {
+  border-radius: 1rem;
+}
+
+.entity-card .card-header {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.entity-card .card-body {
+  padding: 2rem;
+}
+
+.action-buttons .btn {
+  min-width: 120px;
+}
+
+.fields-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .fields-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.field-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.field-label {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 0.25rem;
+}
+
+.field-value {
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: #000;
+  min-height: 1.5em;
+  position: relative;
+}
+
+.field-value:empty::after {
+  content: "Loading…";
+  color: #aaa;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
