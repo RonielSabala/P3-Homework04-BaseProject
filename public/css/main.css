@@ -1,0 +1,84 @@
+:root {
+  --color1: #a9befd;
+  --color2: #264cd5;
+}
+
+.page-title {
+  font-family: "Pacifico", sans-serif;
+  font-size: 3rem;
+  color: var(--color1);
+  text-shadow: 2px 2px 8px var(--color2);
+  letter-spacing: 3px;
+  font-weight: 700;
+  padding: 12px 0;
+  text-align: center;
+}
+
+.page-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  margin: 8px auto 0 auto;
+  background: linear-gradient(90deg, var(--color1), var(--color2));
+  border-radius: 3px;
+  opacity: 0.9;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  max-width: 1200px;
+  border-radius: 15px;
+}
+
+.nav {
+  font-size: 20px;
+  border-bottom: 1px solid black;
+}
+
+.nav-link {
+  color: rgb(6, 112, 206);
+}
+
+.custom-link.nav-link:hover {
+  border-color: black;
+  border-bottom-color: white;
+}
+
+.custom-link.nav-link.active {
+  color: black;
+  border-color: black;
+  border-bottom-color: white;
+}
+
+.view-content {
+  min-height: 570px;
+  margin-top: 20px;
+  padding-top: 5px;
+}
+
+.company {
+  font-size: 18px;
+}
+
+footer {
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 0;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 1000;
+}
+
+.alert {
+  max-width: 500px;
+  margin: 0 auto;
+}
