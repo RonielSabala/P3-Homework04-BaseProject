@@ -16,8 +16,13 @@ class DetailsDepartmentController
             exit;
         }
 
+        // Obtener departamento
         $id = $_GET['id'];
         $dept = DepartmentUtils::get($id);
+        if (!$dept) {
+            exit;
+        }
+
         $template->apply(['dept' => $dept]);
     }
 }

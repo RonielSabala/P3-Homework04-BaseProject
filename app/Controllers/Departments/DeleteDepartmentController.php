@@ -16,6 +16,13 @@ class DeleteDepartmentController
             exit;
         }
 
+        // Verificar que existe el departamento
+        $id = $_GET['id'];
+        $dept = DepartmentUtils::get($id);
+        if (!$dept) {
+            exit;
+        }
+
         // Confirmar si se quieren eliminar los datos
         if (!($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['confirm']) && $_POST['confirm'] === 'yes')) {
             $template->apply();
@@ -23,12 +30,7 @@ class DeleteDepartmentController
         }
 
         // Eliminar departamento
-        $id = $_GET['id'];
-        $success = DepartmentUtils::delete($id);
-        if (!$success) {
-            exit;
-        }
-
+        DepartmentUtils::delete($id);
         header('Location: home.php');
     }
 }
