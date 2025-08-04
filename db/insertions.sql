@@ -1,47 +1,26 @@
 USE `ThesisHubDb`;
 
--- Limpiar todo
-SET
-  FOREIGN_KEY_CHECKS = 0;
-
-TRUNCATE TABLE `comments`;
-
-TRUNCATE TABLE `documents`;
-
-TRUNCATE TABLE `project_tutors`;
-
-TRUNCATE TABLE `projects`;
-
-TRUNCATE TABLE `tutors`;
-
-TRUNCATE TABLE `students`;
-
-TRUNCATE TABLE `departments`;
-
-SET
-  FOREIGN_KEY_CHECKS = 1;
-
--- Insertar Departments
+-- Departments
 INSERT INTO
   `departments` (`dept_name`, `faculty_head`, `email`)
 VALUES
   (
     'Computer Science',
-    'Dr. Ana Pérez',
-    'ana.perez@univ.edu'
+    'Ana Pérez',
+    'CompSci@univ.edu'
   ),
   (
     'Mechanical Engineering',
-    'Dr. Luis Martínez',
-    'luis.martinez@univ.edu'
+    'Luis Martínez',
+    'MechEng@univ.edu'
   ),
   (
     'Business Administration',
-    'Dra. Carmen Rodríguez',
-    'carmen.rodriguez@univ.edu'
+    'Carmen Rodríguez',
+    'BusAdm@univ.edu'
   );
 
--- Insertar Students
+-- Students
 INSERT INTO
   `students` (
     `first_name`,
@@ -101,7 +80,7 @@ VALUES
     2
   );
 
--- Insertar Tutors
+-- Tutors
 INSERT INTO
   `tutors` (
     `first_name`,
@@ -140,7 +119,7 @@ VALUES
     2
   );
 
--- Insertar Projects
+-- Projects
 INSERT INTO
   `projects` (
     `title`,
@@ -179,7 +158,7 @@ VALUES
     3
   );
 
--- Insertar Project_Tutors
+-- Project_Tutors
 INSERT INTO
   `project_tutors` (`project_id`, `tutor_id`, `tutor_role`)
 VALUES
@@ -190,7 +169,7 @@ VALUES
   (4, 1, 'Main Tutor'),
   (4, 2, 'Co-tutor');
 
--- Insertar Documents
+-- Documents
 INSERT INTO
   `documents` (
     `doc_name`,
@@ -236,7 +215,7 @@ VALUES
     1
   );
 
--- Insertar Comments
+-- Comments
 INSERT INTO
   `comments` (
     `comment_text`,

@@ -10,7 +10,14 @@ class DepartmentUtils
 {
     static private $getAllSQL = "SELECT * FROM departments";
     static private $getSQL = "SELECT * FROM departments WHERE id = ?";
-    static private $deleteSQL = "DELETE FROM departments WHERE id = ?";
+    private static $createSQL = "INSERT INTO departments (
+        dept_name,
+        faculty_head,
+        email
+    ) VALUES (
+        ?, ?, ?
+    )
+    ";
     private static $updateSQL = "UPDATE departments
     SET
         dept_name     = ?,
@@ -18,6 +25,8 @@ class DepartmentUtils
         email         = ?
     WHERE
         id = ?";
+    static private $deleteSQL = "DELETE FROM departments WHERE id = ?";
+
 
     public static function getAll()
     {
@@ -43,12 +52,14 @@ class DepartmentUtils
         return $dept;
     }
 
+    public static function create($fields)
+    {
+        return GeneralUtils::executeSql(self::$createSQL, $fields);
+    }
+
     public static function update($fields)
     {
-        global $pdo;
-
-        $stmt = $pdo->prepare(self::$updateSQL);
-        $stmt->execute($fields);
+        return GeneralUtils::executeSql(self::$updateSQL, $fields);
     }
 
     public static function delete($id)

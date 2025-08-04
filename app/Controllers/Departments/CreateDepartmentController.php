@@ -3,10 +3,9 @@
 namespace App\Controllers\Departments;
 
 use App\Core\Template;
-use App\Utils\GeneralUtils;
 use App\Utils\Entities\DepartmentUtils;
 
-class EditDepartmentController
+class CreateDepartmentController
 {
     public function handle(Template $template)
     {
@@ -16,11 +15,10 @@ class EditDepartmentController
                 $_POST['dept_name'],
                 $_POST['faculty_head'],
                 $_POST['email'],
-                $_GET['id'],
             ];
 
-            // Actualizar departamento
-            $success = DepartmentUtils::update($fields);
+            // Crear departamento
+            $success = DepartmentUtils::create($fields);
             if ($success) {
                 // Redirigir
                 header('Location: home.php');
@@ -29,18 +27,6 @@ class EditDepartmentController
             exit;
         }
 
-        if (!isset($_GET['id'])) {
-            GeneralUtils::showAlert('No se especificó el departamento.', 'danger');
-            exit;
-        }
-
-        // Obtener departamento
-        $id = $_GET['id'];
-        $dept = DepartmentUtils::get($id);
-        if (!$dept) {
-            exit;
-        }
-
-        $template->apply(['dept' => $dept]);
+        $template->apply();
     }
 }

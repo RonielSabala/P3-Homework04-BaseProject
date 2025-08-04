@@ -21,6 +21,10 @@
                         <label for="email" class="field-label">Email</label>
                         <div id="email" class="field-value"><?= htmlspecialchars($dept['email']); ?></div>
                     </div>
+                    <div class="field-item">
+                        <label for="id" class="field-label">Id</label>
+                        <div id="id" class="field-value"><?= htmlspecialchars($dept['id']); ?></div>
+                    </div>
                 </div>
             </dl>
 

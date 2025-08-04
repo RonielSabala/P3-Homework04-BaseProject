@@ -16,8 +16,9 @@ const ROUTES = [
     'auth/logout.php' => ['controller' => \App\Controllers\Auth\LogoutController::class],
     // Departments
     'departments/home.php'    => ['page' => 'departments',  'controller' => \App\Controllers\Departments\HomeDepartmentController::class],
-    'departments/edit.php'    => ['page' => 'departments',  'controller' => \App\Controllers\Departments\EditDepartmentController::class],
+    'departments/create.php'  => ['page' => 'departments',  'controller' => \App\Controllers\Departments\CreateDepartmentController::class],
     'departments/details.php' => ['page' => 'departments',  'controller' => \App\Controllers\Departments\DetailsDepartmentController::class],
+    'departments/edit.php'    => ['page' => 'departments',  'controller' => \App\Controllers\Departments\EditDepartmentController::class],
     'departments/delete.php'  => ['page' => 'departments',  'controller' => \App\Controllers\Departments\DeleteDepartmentController::class],
 ];
 

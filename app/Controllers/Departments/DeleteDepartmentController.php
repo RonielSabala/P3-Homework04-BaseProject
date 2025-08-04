@@ -13,10 +13,12 @@ class DeleteDepartmentController
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Eliminar departamento
-            DepartmentUtils::delete($_GET['id']);
+            $success = DepartmentUtils::delete($_GET['id']);
+            if ($success) {
+                // Redirigir
+                header('Location: home.php');
+            }
 
-            // Redirigir
-            header('Location: home.php');
             exit;
         }
 

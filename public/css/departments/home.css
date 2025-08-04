@@ -140,3 +140,9 @@ h2 {
   background: #f7fafd;
   transition: background var(--btn-transition);
 }
+
+.no-data {
+  text-align: center;
+  padding: 1rem;
+  color: #888;
+}

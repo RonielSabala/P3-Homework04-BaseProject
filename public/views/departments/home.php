@@ -1,13 +1,13 @@
-<h2>Listado</h2>
+<h2>Departments</h2>
 <div class="d-flex justify-content-end mb-3">
-    <a href="edit.php" class="btn btn-primary">
-        <i class="bi bi-plus-circle"></i> Crear
+    <a href="create.php" class="btn btn-primary">
+        <i class="bi bi-plus-circle"></i> Crear nuevo
     </a>
 </div>
 <table class="table">
     <thead>
         <tr>
-            <th>Id</th>
+            <th>No.</th>
             <th>Dept. Name</th>
             <th>Faculty Head</th>
             <th>Email</th>
@@ -16,10 +16,11 @@
     </thead>
     <tbody>
         <?php
+        $i = 1;
         foreach ($departments as $dept) {
         ?>
             <tr>
-                <td><?= htmlspecialchars($dept['id']) ?></td>
+                <td><?= $i++ ?></td>
                 <td><?= htmlspecialchars($dept['dept_name']) ?></td>
                 <td><?= htmlspecialchars($dept['faculty_head']) ?></td>
                 <td><?= htmlspecialchars($dept['email']) ?></td>
@@ -42,3 +43,10 @@
         ?>
     </tbody>
 </table>
+
+<?php if (!$departments): ?>
+    <div id="noData" class="no-data">
+        <i class="bi bi-inbox-fill fs-1 mb-2"></i>
+        <div>No departments found.</div>
+    </div>
+<?php endif; ?>
