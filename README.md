@@ -1,11 +1,12 @@
 # ThesisHub
 
-Este es un sistema de control de tesis universitarias.
+Sistema de control de tesis universitarias.
 
 # Instrucciones para ejecutar el proyecto
 
 _Requisitos_:
 
+- PHP
 - MySQL
 
 ## 1. Conexión con la base de datos
