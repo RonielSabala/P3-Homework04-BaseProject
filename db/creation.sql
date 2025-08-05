@@ -10,7 +10,7 @@ DROP TABLE IF EXISTS `departments`;
 CREATE TABLE
     `departments` (
         `id` INT PRIMARY KEY AUTO_INCREMENT,
-        `dept_name` VARCHAR(50) NOT NULL,
+        `dept_name` VARCHAR(50) NOT NULL UNIQUE,
         `faculty_head` VARCHAR(50) NOT NULL,
         `email` VARCHAR(50) NOT NULL
     );

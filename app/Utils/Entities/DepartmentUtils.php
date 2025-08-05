@@ -10,6 +10,7 @@ class DepartmentUtils
 {
     static private $getAllSQL = "SELECT * FROM departments";
     static private $getSQL = "SELECT * FROM departments WHERE id = ?";
+    static private $getByNameSQL = "SELECT * FROM departments WHERE dept_name = ?";
     private static $createSQL = "INSERT INTO departments (
         dept_name,
         faculty_head,
@@ -50,6 +51,16 @@ class DepartmentUtils
         }
 
         return $dept;
+    }
+
+    public static function getByName($dept_name)
+    {
+
+        global $pdo;
+
+        $stmt = $pdo->prepare(self::$getByNameSQL);
+        $stmt->execute([$dept_name]);
+        return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
     public static function create($fields)

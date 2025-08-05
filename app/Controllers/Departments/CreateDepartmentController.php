@@ -21,17 +21,19 @@ class CreateDepartmentController
             // Validar datos
             $error_msg = '';
             if (strlen($fields[0]) > 50) {
-                $error_msg = 'El nombre del departamento';
+                $error_msg = 'El nombre del departamento no puede tener más de 50 caracteres!';
             } elseif (strlen($fields[1]) > 50) {
-                $error_msg = 'El nombre del jefe de facultad';
+                $error_msg = 'El nombre del jefe de facultad no puede tener más de 50 caracteres!';
             } elseif (strlen($fields[2]) > 50) {
-                $error_msg = 'El email';
+                $error_msg = 'El email no puede tener más de 50 caracteres!';
+            } elseif (DepartmentUtils::getByName($fields[0])) {
+                $error_msg = 'Ya existe un departamento con ese nombre!';
             }
 
             // Mostrar error
             if ($error_msg) {
                 $template->apply();
-                GeneralUtils::showAlert($error_msg . ' no puede tener más de 50 caracteres!', 'danger', showReturn: false);
+                GeneralUtils::showAlert($error_msg, 'danger', showReturn: false);
                 exit;
             }
 
