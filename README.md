@@ -1,3 +1,7 @@
+# ThesisHub
+
+Este es un sistema de control de tesis universitarias.
+
 # Instrucciones para ejecutar el proyecto
 
 _Requisitos_:
