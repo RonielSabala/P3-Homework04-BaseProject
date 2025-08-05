@@ -27,3 +27,14 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+footer {
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 0;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 1000;
+}

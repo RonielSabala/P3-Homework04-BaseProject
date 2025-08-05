@@ -59,7 +59,7 @@ body {
   box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.2);
 }
 
-.btn-login {
+#btn-login {
   width: 100%;
   padding: 0.75rem;
   background: #667eea;
@@ -72,22 +72,11 @@ body {
   transition: background 0.2s, transform 0.1s;
 }
 
-.btn-login:hover {
+#btn-login:hover {
   background: #5a67d8;
   transform: translateY(-1px);
 }
 
-.btn-login:active {
+#btn-login:active {
   transform: translateY(0);
-}
-
-footer {
-  position: sticky;
-  bottom: 0;
-  width: 100%;
-  padding: 10px 0;
-  background-color: transparent;
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
-  z-index: auto;
 }

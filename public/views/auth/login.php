@@ -15,7 +15,7 @@
                 <label for="password">Contraseña</label>
                 <input type="password" id="password" name="password" required>
             </div>
-            <button type="submit" class="btn-login">Ingresar</button>
+            <button type="submit" id="btn-login">Ingresar</button>
         </form>
     </div>
 </div>
