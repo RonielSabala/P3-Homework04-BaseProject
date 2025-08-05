@@ -1,7 +1,7 @@
 <h2>Departments</h2>
 <div class="d-flex justify-content-end mb-3">
-    <a href="create.php" class="btn btn-primary">
-        <i class="bi bi-plus-circle"></i> Crear nuevo
+    <a id="btn-create" href="create.php" class="btn btn-primary">
+        <i class="bi bi-plus-circle"></i> Create New
     </a>
 </div>
 <table class="table">
@@ -11,7 +11,7 @@
             <th>Dept. Name</th>
             <th>Faculty Head</th>
             <th>Email</th>
-            <th>Acciones</th>
+            <th>Actions</th>
         </tr>
     </thead>
     <tbody>

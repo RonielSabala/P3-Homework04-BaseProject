@@ -30,10 +30,10 @@
                 </dl>
 
                 <div class="d-flex justify-content-between align-items-center mt-4 action-buttons">
-                    <button type="submit" class="btn btn-lg btn-danger">
+                    <button type="submit" id="btn-delete" class="btn btn-lg btn-danger">
                         <i class="bi bi-trash3-fill me-2"></i> Delete
                     </button>
-                    <a class="btn btn-outline-secondary btn-lg" href="home.php">
+                    <a id="btn-return" class="btn btn-outline-secondary btn-lg" href="home.php">
                         <i class="bi bi-arrow-left-circle me-2"></i> Back to List
                     </a>
                 </div>

@@ -9,11 +9,11 @@ $route = GeneralUtils::splitURI($uri)[0];
 <div class="divMenu">
     <ul class="nav nav-tabs">
         <li class="nav-item">
-            <a class="<?= GeneralUtils::getActiveClass('home'); ?>"
+            <a id="home-nav" class="<?= GeneralUtils::getActiveClass('home'); ?>"
                 href="/home.php">Inicio</a>
         </li>
         <li class="nav-item">
-            <a class="<?= GeneralUtils::getActiveClass('departments'); ?>"
+            <a id="departments-nav" class="<?= GeneralUtils::getActiveClass('departments'); ?>"
                 href="/departments/home.php">Departamentos</a>
         </li>
         <?= GeneralUtils::setLogoutButton(); ?>

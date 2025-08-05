@@ -38,6 +38,7 @@ class GeneralUtils
         <li class="nav-item ms-auto">
             <a
                 href="/auth/logout.php"
+                id="btn-logout"
                 class="btn btn-outline-danger btn-sm">
                 Cerrar sesión
             </a>

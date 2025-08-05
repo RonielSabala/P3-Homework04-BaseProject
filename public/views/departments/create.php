@@ -23,10 +23,10 @@
                     </div>
                 </div>
                 <div class="d-flex justify-content-between align-items-center mt-4 action-buttons">
-                    <button type="submit" class="btn btn-success btn-lg">
+                    <button type="submit" id="btn-create" class="btn btn-success btn-lg">
                         <i class="bi bi-plus-circle me-2"></i> Create
                     </button>
-                    <a class="btn btn-outline-secondary btn-lg" href="home.php">
+                    <a id="btn-return" class="btn btn-outline-secondary btn-lg" href="home.php">
                         <i class="bi bi-arrow-left-circle me-2"></i> Back to List
                     </a>
                 </div>

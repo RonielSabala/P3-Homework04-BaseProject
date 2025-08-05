@@ -29,7 +29,7 @@
             </dl>
 
             <div class="d-flex justify-content-end mt-4 action-buttons">
-                <a href="home.php" class="btn btn-outline-secondary btn-lg">
+                <a href="home.php" id="btn-return" class="btn btn-outline-secondary btn-lg">
                     <i class="bi bi-arrow-left-circle me-2"></i> Back to List
                 </a>
             </div>
