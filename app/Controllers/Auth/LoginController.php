@@ -15,34 +15,22 @@ class LoginController
             $password = $_POST["password"];
             $user = UserUtils::getUserByName($username);
 
-            // Validar usuario
-
-            $msg = '';
-            $error = false;
-            if (!$error && strlen($username) > 50) {
-                $error = true;
-                $msg = 'La nombre de usuario no puede tener mas 50 caracteres!';
-            }
-
-            if (!$error && strlen($password) > 50) {
-                $error = true;
-                $msg = 'La contraseña no puede tener mas 50 caracteres!';
-            }
-
-            if (!$error && !$user) {
-                $error = true;
-                $msg = 'El usuario proporcionado no existe!';
-            }
-
-            if (!$error && $password != $user->password) {
-                $error = true;
-                $msg = 'Contraseña incorrecta!';
+            // Validar usuario y contraseña
+            $error_msg = '';
+            if (strlen($username) > 50) {
+                $error_msg = 'El nombre de usuario no puede tener más de 50 caracteres!';
+            } elseif (strlen($password) > 50) {
+                $error_msg = 'La contraseña no puede tener más de 50 caracteres!';
+            } elseif (!$user) {
+                $error_msg = 'El usuario proporcionado no existe!';
+            } elseif ($password != $user->password) {
+                $error_msg = 'Contraseña incorrecta!';
             }
 
             // Mostrar error
-            if ($error) {
+            if ($error_msg) {
                 $template->apply();
-                GeneralUtils::showAlert($msg, 'danger',  showReturn: false);
+                GeneralUtils::showAlert($error_msg, 'danger', showReturn: false);
                 exit;
             }
 
