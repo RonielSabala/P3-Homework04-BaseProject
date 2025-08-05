@@ -7,14 +7,14 @@ use PDO;
 
 class UserUtils
 {
-    static private $userPasswordSql = "SELECT * FROM students WHERE first_name = ?";
+    static private $userPasswordSql = "SELECT * FROM students WHERE username = ?";
 
-    public static function getUserPassByName($studentName)
+    public static function getUserByName($username)
     {
         global $pdo;
 
         $stmt = $pdo->prepare(self::$userPasswordSql);
-        $stmt->execute([$studentName]);
+        $stmt->execute([$username]);
         return $stmt->fetch(PDO::FETCH_OBJ);
     }
 }

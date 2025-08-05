@@ -23,8 +23,7 @@ VALUES
 -- Students
 INSERT INTO
   `students` (
-    `first_name`,
-    `last_name`,
+    `username`,
     `email`,
     `phone`,
     `password`,
@@ -33,47 +32,41 @@ INSERT INTO
 VALUES
   (
     'student',
-    'student',
     'student@student.univ.edu',
     '809-123-4567',
     "tarea4",
     2
   ),
   (
-    'Carlos',
-    'Gómez',
+    'Carlos Gómez',
     'carlos.gomez@student.univ.edu',
     '809-123-4567',
     "123456",
     1
   ),
   (
-    'María',
-    'López',
+    'María López',
     'maria.lopez@student.univ.edu',
     '809-234-5678',
     "123456",
     2
   ),
   (
-    'José',
-    'Fernández',
+    'José Fernández',
     'jose.fernandez@student.univ.edu',
     '809-345-6789',
     "123456",
     1
   ),
   (
-    'Laura',
-    'Ramírez',
+    'Laura Ramírez',
     'laura.ramirez@student.univ.edu',
     '809-456-7890',
     "123456",
     3
   ),
   (
-    'Andrés',
-    'Sánchez',
+    'Andrés Sánchez',
     'andres.sanchez@student.univ.edu',
     '809-567-8901',
     "123456",
