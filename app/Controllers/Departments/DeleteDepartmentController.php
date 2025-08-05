@@ -11,9 +11,15 @@ class DeleteDepartmentController
 {
     public function handle(Template $template)
     {
+        if (!isset($_GET['id'])) {
+            GeneralUtils::showAlert('No se especificó el departamento.', 'danger');
+            exit;
+        }
+
+        $id = $_GET['id'];
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Eliminar departamento
-            $success = DepartmentUtils::delete($_GET['id']);
+            $success = DepartmentUtils::delete($id);
             if ($success) {
                 // Redirigir
                 header('Location: home.php');
@@ -22,13 +28,7 @@ class DeleteDepartmentController
             exit;
         }
 
-        if (!isset($_GET['id'])) {
-            GeneralUtils::showAlert('No se especificó el departamento.', 'danger');
-            exit;
-        }
-
         // Obtener departamento
-        $id = $_GET['id'];
         $dept = DepartmentUtils::get($id);
         if (!$dept) {
             exit;

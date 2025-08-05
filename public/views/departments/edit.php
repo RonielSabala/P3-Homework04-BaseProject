@@ -1,4 +1,4 @@
-<div class="container center-screen pt-2">
+<div class="container center-screen pt-2 mb-3">
     <div class="card shadow-sm entity-card w-100" style="max-width: 1000px;">
         <div class="card-header bg-warning text-dark">
             <h3 class="mb-0">Edit Department</h3>
