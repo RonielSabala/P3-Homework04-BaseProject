@@ -25,7 +25,7 @@ CREATE TABLE
         `email` VARCHAR(50) NOT NULL,
         `phone` VARCHAR(15) NOT NULL,
         `password` VARCHAR(50) NOT NULL,
-        `department_id` INT NOT NULL,
+        `department_id` INT,
         FOREIGN KEY (`department_id`) REFERENCES `departments` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
     );
 

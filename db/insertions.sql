@@ -35,7 +35,7 @@ VALUES
     'student@student.univ.edu',
     '809-123-4567',
     "tarea4",
-    2
+    null
   ),
   (
     'Carlos Gómez',
