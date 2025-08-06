@@ -1,6 +1,8 @@
 # ThesisHub
 
-Sistema de control de tesis universitarias.
+ThesisHub es un sistema de control de tesis universitarias que centraliza y profesionaliza todos los procesos involucrados, desde el registro inicial hasta la aprobación final.
+
+---
 
 # Instrucciones para ejecutar el proyecto
 
@@ -40,4 +42,4 @@ Para acceder al sistema, inicia sesión con las siguientes credenciales:
 
 ---
 
-> ¡Esos fueron todos los pasos!
+> ¡Listo, esos fueron todos los pasos!
